@@ -10,7 +10,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 VIDEO_ROOT = Path(".")  # где лежат show1/, show2/...
 OUT_FRAMES = Path("data/frames")  # куда кладём кадры
 OUT_AUDIO = Path("data/audio")  # куда кладём wav
-FPS = 2
+FPS = 1
 SAMPLE_RATE = 16_000
 MAX_WORKERS = 4  # параллельные FFmpeg-процессы
 LOG_FILE = "prepare_media.log"
