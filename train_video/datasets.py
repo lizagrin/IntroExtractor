@@ -3,8 +3,8 @@ import numpy as np, torch, pathlib, pandas as pd
 
 
 class VideoWindowDataset(torch.utils.data.Dataset):
-    def __init__(self, root_npz="data/clip_windows", labels_csv="data/labels.csv",
-                 split="train video", test_shows=("show2",), augment=False):
+    def __init__(self, root_npz="../data/clip_windows", labels_csv="../data/labels.csv",
+                 split="train_video", test_shows=("show2",), augment=False):
         self.root = pathlib.Path(root_npz)
         self.labels_df = pd.read_csv(labels_csv)
 
@@ -19,7 +19,7 @@ class VideoWindowDataset(torch.utils.data.Dataset):
         self.items = []
         for p in self.root.glob("*.npz"):
             show = p.name.split("_")[0]  # show1 / show2
-            if (split == "train video" and show in test_shows) or \
+            if (split == "train_video" and show in test_shows) or \
                     (split == "val" and show not in test_shows):
                 continue
             npz = np.load(p)

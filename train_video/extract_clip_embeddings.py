@@ -7,7 +7,7 @@ Reproduce section 3.1–3.2 of the paper:
 * Pack sliding windows of 60 frames (stride = 60)
   into an array: (N, 60, 512) and save as .npz
 """
-import os, pathlib, glob
+import os, pathlib
 import numpy as np
 from PIL import Image
 from tqdm import tqdm
@@ -52,12 +52,12 @@ for ep_dir in sorted(ROOT_FRAMES.rglob("*")):
     out_file = ROOT_OUT / (str(rel_ep).replace(os.sep, "_") + "_windows.npz")
     out_file.parent.mkdir(parents=True, exist_ok=True)
     if out_file.exists():
-        print(f"[✓] {rel_ep} — уже готово");
+        print(f"[✓] {rel_ep} — уже готово")
         continue
 
     frame_paths = sorted(ep_dir.glob("*.jpg"))
     if len(frame_paths) < WINDOW_SIZE:
-        print(f"[!] {rel_ep}: меньше 60 кадров, пропуск");
+        print(f"[!] {rel_ep}: меньше 60 кадров, пропуск")
         continue
 
     # ---------- 3a.  Encode all frames ----------
@@ -66,7 +66,7 @@ for ep_dir in sorted(ROOT_FRAMES.rglob("*")):
     batch_imgs, idx_buf = [], []
     for idx, fp in enumerate(tqdm(frame_paths, desc=str(rel_ep), unit="f")):
         img = preprocess(Image.open(fp)).unsqueeze(0)  # (1,3,224,224)
-        batch_imgs.append(img);
+        batch_imgs.append(img)
         idx_buf.append(idx)
 
         if len(batch_imgs) == BATCH_SIZE or idx == len(frame_paths) - 1:
