@@ -6,7 +6,7 @@ from model import ClipAttention60
 
 
 def main():
-    train_ds = VideoWindowDataset(split="train_video", augment=True)
+    train_ds = VideoWindowDataset(split="train video", augment=True)
     val_ds = VideoWindowDataset(split="val", augment=False)
 
     train_loader = DataLoader(train_ds, batch_size=8, shuffle=True, num_workers=4)
@@ -19,7 +19,7 @@ def main():
 
     def step(loader, train=True):
         if train:
-            model.train()
+            model.train();
             optim.zero_grad()
         else:
             model.eval()
@@ -30,10 +30,10 @@ def main():
                 p = model(x)
                 loss = criterion(p, y)
                 if train:
-                    loss.backward()
-                    optim.step()
+                    loss.backward();
+                    optim.step();
                     optim.zero_grad()
-                tot += loss.item() * x.size(0)
+                tot += loss.item() * x.size(0);
                 n += x.size(0)
         return tot / n
 
@@ -44,7 +44,7 @@ def main():
     for epoch in range(1, 17):
         tr = step(train_loader, True)
         vl = step(val_loader, False)
-        print(f"E{epoch:02} train_video={tr:.4f} val={vl:.4f}")
+        print(f"E{epoch:02} train video={tr:.4f} val={vl:.4f}")
 
         if vl < best:
             best = vl
@@ -55,5 +55,5 @@ def main():
 if __name__ == "__main__":
     import multiprocessing as mp
 
-    mp.freeze_support()
+    mp.freeze_support()  # на случай build-exe; безопасно оставить
     main()
