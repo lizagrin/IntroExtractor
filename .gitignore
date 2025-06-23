@@ -2,9 +2,12 @@
 /Mad.Men.S01.Season.1.Complete.720p.BluRay.2CH.x264-PSA/
 /Alfred Hitchcock Presents 1955 Season 1 Complete WEB x264 [i_c]/
 /data/
-/show1/
-/show2/
-/weights/
-/weights 1/
+/archive/show1/
+/archive/show2/
+/archive/weights/
+/archive/weights 1/
 /prepare_media.log
 /archive/
+/models/
+/notebooks/refactor.ipynb
+/results/plots 1/
