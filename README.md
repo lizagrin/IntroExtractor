@@ -154,3 +154,49 @@
 * Внедрение мультиязычной поддержки и анализа субтитров.
 * Оптимизация архитектуры для работы на мобильных устройствах и в режиме реального времени.
 * Создание веб-интерфейса и API для удобной интеграции решения в платформы онлайн-кинотеатров.
+
+[Ссылка на презентацию для защиты](https://docs.google.com/presentation/d/1p3sGUXsCtW5psnBDD3U0GqVvDEtSpaxlccS_rBnaipQ/edit?usp=sharing)
+
+## Список литературы:
+1. **Korolkov V., Yanchenko A.**
+   *Automatic Detection of Intro and Credits in Video using CLIP and Multi-Head Attention* — arXiv:2504.09738, 2025.
+   URL: [https://arxiv.org/html/2504.09738v1](https://arxiv.org/html/2504.09738v1) ([arxiv.org][1])
+
+2. **Hao X. и др.**
+   *Intro and Recap Detection for Movies and TV Series*. Proceedings of WACV 2021, pp. 13-22.
+   URL: [https://openaccess.thecvf.com/content/WACV2021/papers/Hao\_Intro\_and\_Recap\_Detection\_for\_Movies\_and\_TV\_Series\_WACV\_2021\_paper.pdf](https://openaccess.thecvf.com/content/WACV2021/papers/Hao_Intro_and_Recap_Detection_for_Movies_and_TV_Series_WACV_2021_paper.pdf) ([openaccess.thecvf.com][2])
+
+3. **Radford A. и др.**
+   *Learning Transferable Visual Models from Natural Language Supervision (CLIP)*. ICML 2021.
+   URL: [https://arxiv.org/abs/2103.00020](https://arxiv.org/abs/2103.00020) ([arxiv.org][3])
+
+4. **Bertasius G., Wang H., Torresani L.**
+   *Is Space-Time Attention All You Need for Video Understanding? (TimeSformer)*. arXiv:2102.05095, 2021.
+   URL: [https://arxiv.org/abs/2102.05095](https://arxiv.org/abs/2102.05095) ([arxiv.org][4])
+
+5. **Tong Z. и др.**
+   *VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training*. arXiv:2203.12602, 2022.
+   URL: [https://arxiv.org/abs/2203.12602](https://arxiv.org/abs/2203.12602) ([arxiv.org][5])
+
+6. **Carreira J., Zisserman A.**
+   *Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset* (I3D). CVPR 2017.
+   URL: [https://arxiv.org/abs/1705.07750](https://arxiv.org/abs/1705.07750) ([arxiv.org][6])
+
+7. **Park D. S. и др.**
+   *SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition*. INTERSPEECH 2019.
+   URL: [https://arxiv.org/abs/1904.08779](https://arxiv.org/abs/1904.08779) ([arxiv.org][7])
+
+8. **Bertasius G., Wang H., Torresani L.**
+   *Video Transformers: A Survey*. arXiv:2201.05991, 2022 — полезное обзорное исследование, обобщающее применения трансформеров к видео-задачам.
+   URL: [https://arxiv.org/pdf/2201.05991](https://arxiv.org/pdf/2201.05991) ([arxiv.org][8])
+
+Эти работы лежат в основе выбранной архитектуры (CLIP + Transformer для видео, CNN + SpecAugment для аудио), методов аугментации и подходов к мультимодальному объединению признаков, а также предоставляют сравнимые решения для задачи автоматического пропуска заставок и титров.
+
+[1]: https://arxiv.org/html/2504.09738v1 "Automatic Detection of Intro and Credits in Video using CLIP and Multihead Attention"
+[2]: https://openaccess.thecvf.com/content/WACV2021/papers/Hao_Intro_and_Recap_Detection_for_Movies_and_TV_Series_WACV_2021_paper.pdf "Intro and Recap Detection for Movies and TV Series"
+[3]: https://arxiv.org/abs/2103.00020?utm_source=chatgpt.com "Learning Transferable Visual Models From Natural Language ..."
+[4]: https://arxiv.org/abs/2102.05095?utm_source=chatgpt.com "Is Space-Time Attention All You Need for Video Understanding?"
+[5]: https://arxiv.org/abs/2203.12602?utm_source=chatgpt.com "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training"
+[6]: https://arxiv.org/abs/1705.07750?utm_source=chatgpt.com "Quo Vadis, Action Recognition? A New Model and the Kinetics ..."
+[7]: https://arxiv.org/abs/1904.08779?utm_source=chatgpt.com "SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition"
+[8]: https://arxiv.org/pdf/2201.05991?utm_source=chatgpt.com "[PDF] Video Transformers: A Survey - arXiv"
